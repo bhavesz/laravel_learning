@@ -22,3 +22,6 @@ Route::get('/foo', function () {
     return "This is great bhavesh";
 });
 Route::resource('posts', 'PostController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
