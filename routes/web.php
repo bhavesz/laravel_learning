@@ -21,7 +21,7 @@ Route::get('/welcome', function () {
 Route::get('/foo', function () {
     return "This is great bhavesh";
 });
-Route::resource('posts', 'PostController');
+Route::resource('posts', 'PostController')->middleware('auth');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
